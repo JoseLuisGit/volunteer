@@ -1,0 +1,34 @@
+{
+  "name": "volunteer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run eslint && npm run type-check && npm run build:js",
+    "build:js": "babel src --out-dir dist --extensions \".ts\"",
+    "start": "tsc --noEmit && babel-node --extensions \".ts\" src/index.ts",
+    "type-check": "tsc --noEmit",
+    "eslint": "eslint \"**/*.{ts,tsx}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/node": "^7.22.10",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-typescript": "^7.22.5",
+    "@types/node": "^20.5.1",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "babel-plugin-source-map-support": "^2.2.0",
+    "eslint": "^8.47.0",
+    "typescript": "^5.1.6"
+  }
+}
